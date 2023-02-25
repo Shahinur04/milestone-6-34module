@@ -10,7 +10,6 @@ const displayCountries=countries=>{
     // for(country of countries)
     //     console.log(country)
     // }
-
     countries.forEach(country =>{
         console.log(country);
         const countryDiv=document.createElement('div');
