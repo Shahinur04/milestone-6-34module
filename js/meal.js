@@ -41,11 +41,11 @@ const exampleModal= idMeal=>{
 const url=`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
 fetch(url)
 .then(res=>res.json())
-.then(data=>console.log(data.meals[0]));
+.then(data=>displayExampleModal(data.meals[0]));
 }
 const displayExampleModal=meal=>{
   document.getElementById('exampleModalLabel').innerText=meal.strMeal;
  const imgBody=document.getElementById('img-body').innerHTML=`
- <img class="width-200px" src="${meal.strMealThumb}">`
+ <img class="img-fluid" src="${meal.strMealThumb}">`
 }
 loadMeals('chicken');
